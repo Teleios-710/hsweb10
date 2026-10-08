@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10주차 예제 10 · && || ! 와 참·거짓 판정</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.7; padding: 16px; }
+    .note { padding: 10px 12px; border-left: 4px solid #102A56; background: #eef2fb; }
+    .sandbox { margin: 16px 0; padding: 12px 16px; border: 1px dashed #9aa6b8; border-radius: 8px; }
+    .sandbox h2 { font-size: 0.9rem; color: #55607a; margin: 0 0 8px; }
+  </style>
+</head>
+<body>
+  <p class="note">
+    <strong>10주차 예제 10 · && || ! 와 참·거짓 판정</strong><br>
+    결과는 개발자도구 <strong>콘솔</strong>에서 봅니다 — F12 또는 Ctrl+Shift+I (Mac은 Cmd+Option+I).
+  </p>
+
+  <div class="sandbox">
+    <h2>연습용 화면 — 아래 코드가 손댈 요소들입니다. 마음대로 고쳐 보세요.</h2>
+    <h1 id="title">제목 h1</h1>
+    <p id="name">이름</p>
+    <p id="price">12000</p>
+    <div class="box">div.box</div>
+
+    <ul id="list" class="list">
+      <li>목록 1</li>
+      <li>목록 2</li>
+      <li>목록 3</li>
+    </ul>
+
+    <form id="myForm">
+      <input type="text" name="name" placeholder="이름">
+      <label><input type="checkbox" id="agree"> 동의합니다</label>
+      <button type="button" id="btn">버튼</button>
+    </form>
+  </div>
+
+  <script>
+    /*
+    10주차 예제 10 — && || ! 와 참·거짓 판정
+    */
+    const age = 20, hasCard = true;
+
+    age >= 19 && hasCard    // 그리고 — 둘 다 참
+    age < 19 || hasCard     // 또는 — 하나라도 참
+    !hasCard                // 부정
+
+    // 거짓으로 취급되는 값 (falsy) — 이 여섯 개만 외우면 됩니다
+    false, 0, '', null, undefined, NaN
+
+    // 나머지는 전부 참 (truthy) — 빈 배열 []과 빈 객체 {}도 참입니다!
+    if ([]) console.log('빈 배열도 참입니다');   // 실행됩니다
+  </script>
+</body>
+</html>

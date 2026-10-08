@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10주차 예제 1 · CSS와 마찬가지로 세 가지</title>
+</head>
+<body>
+  <!--
+  10주차 예제 1 — CSS와 마찬가지로 세 가지
+  -->
+  <!-- ① 인라인 — 쓰지 않습니다 -->
+  <button onclick="alert('hi')">버튼</button>
+
+  <!-- ② 내부 script — 연습용 -->
+  <script>
+    console.log('안녕');
+  </script>
+
+  <!-- ③ 외부 파일 — 실무 표준 -->
+  <script src="app.js"></script>
+
+  <!-- ⚠ script는 </body> 바로 앞에 둡니다.
+       head에 두면 HTML이 만들어지기 전에 실행되어
+       document.querySelector가 null을 돌려줍니다.
+       (또는 head에 두되 defer 속성을 붙입니다) -->
+</body>
+</html>

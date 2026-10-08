@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10주차 예제 5 · 따옴표 세 종류</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.7; padding: 16px; }
+    .note { padding: 10px 12px; border-left: 4px solid #102A56; background: #eef2fb; }
+    .sandbox { margin: 16px 0; padding: 12px 16px; border: 1px dashed #9aa6b8; border-radius: 8px; }
+    .sandbox h2 { font-size: 0.9rem; color: #55607a; margin: 0 0 8px; }
+  </style>
+</head>
+<body>
+  <p class="note">
+    <strong>10주차 예제 5 · 따옴표 세 종류</strong><br>
+    결과는 개발자도구 <strong>콘솔</strong>에서 봅니다 — F12 또는 Ctrl+Shift+I (Mac은 Cmd+Option+I).
+  </p>
+
+  <div class="sandbox">
+    <h2>연습용 화면 — 아래 코드가 손댈 요소들입니다. 마음대로 고쳐 보세요.</h2>
+    <h1 id="title">제목 h1</h1>
+    <p id="name">이름</p>
+    <p id="price">12000</p>
+    <div class="box">div.box</div>
+
+    <ul id="list" class="list">
+      <li>목록 1</li>
+      <li>목록 2</li>
+      <li>목록 3</li>
+    </ul>
+
+    <form id="myForm">
+      <input type="text" name="name" placeholder="이름">
+      <label><input type="checkbox" id="agree"> 동의합니다</label>
+      <button type="button" id="btn">버튼</button>
+    </form>
+  </div>
+
+  <script>
+    /*
+    10주차 예제 5 — 따옴표 세 종류
+    */
+    const a = '작은따옴표';
+    const b = "큰따옴표";
+    const c = `백틱 — 특별합니다`;
+
+    const name = '한신';
+
+    // ❌ 옛날 방식 — 읽기 어렵다
+    const msg1 = '안녕하세요, ' + name + '님. 오늘은 ' + 3 + '일입니다.';
+
+    // ✅ 템플릿 문자열 — 백틱 안에서 ${ } 로 값을 끼워 넣는다
+    const msg2 = `안녕하세요, ${name}님. 오늘은 ${1 + 2}일입니다.`;
+
+    // 백틱은 여러 줄도 그대로 유지합니다
+    const html = `
+      <div>
+        <h1>${name}</h1>
+      </div>
+    `;
+  </script>
+</body>
+</html>
